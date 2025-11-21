@@ -2,7 +2,10 @@ CREATE TABLE wallets (
     address TEXT PRIMARY KEY,
     balance TEXT NOT NULL,
     nonce BIGINT NOT NULL,
-    last_seen_block BIGINT
+    last_seen_block BIGINT,
+    type TEXT,       
+    defi TEXT DEFAULT '',        
+    sensitive TEXT DEFAULT '' 
 );
 
 CREATE TABLE transactions (
